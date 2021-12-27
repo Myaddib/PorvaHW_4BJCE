@@ -34,10 +34,11 @@ public class SquarePyramid extends SpaceShape implements AreaMeasurable, VolumeM
 
     @Override
     public String toString() {
-        return "SquarePyramid{" + Arrays.toString(getVerticles()) + ",baseHeight= " + baseHeight + ", baseWidth=" + baseWidth + ", " +
-                "volume=" + volume +
+        return "SquarePyramid{" +
+                "baseWidth=" + baseWidth +
+                ", baseHeight=" + baseHeight +
+                ", volume=" + volume +
                 ", area=" + area +
                 '}';
     }
-
 }

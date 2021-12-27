@@ -19,13 +19,13 @@ public class Rectangle extends PlanceShape implements PerimeterMeasurable, AreaM
         this.width = width;
     }
 
-    @Override
+
     public double getPerimeter() {
         perimeter = 2 * (width + height);
         return perimeter;
     }
 
-    @Override
+
     public double getArea() {
         area = width * height;
         return area;
@@ -33,14 +33,11 @@ public class Rectangle extends PlanceShape implements PerimeterMeasurable, AreaM
 
     @Override
     public String toString() {
-        return "Rectangle{" + Arrays.toString(getVerticles()) + ", width= " + width + ", heiht=" + height + " ," +
-                "perimeter=" + perimeter +
+        return "Rectangle{" +
+                "width=" + width +
+                ", height=" + height +
+                ", perimeter=" + perimeter +
                 ", area=" + area +
                 '}';
-    }
-
-    @Override
-    public double SegmentLine(Vertex a, Vertex b) {
-        return super.SegmentLine(a, b);
     }
 }

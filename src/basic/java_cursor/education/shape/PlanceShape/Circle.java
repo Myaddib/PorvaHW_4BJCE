@@ -4,7 +4,6 @@ import basic.java_cursor.education.shape.AreaMeasurable;
 import basic.java_cursor.education.shape.PerimeterMeasurable;
 import basic.java_cursor.education.shape.SpaceShape.SpaceShape;
 import basic.java_cursor.education.shape.Vertex;
-import basic.java_cursor.education.shape.VolumeMeasurable;
 
 import java.util.Arrays;
 
@@ -31,14 +30,13 @@ public class Circle extends SpaceShape implements PerimeterMeasurable, AreaMeasu
         area = Math.PI * radius * radius;
         return area;
     }
+
     @Override
     public String toString() {
-        return "Circle{" + Arrays.toString(getVerticles()) + "," + radius + " /" +
+        return "Circle{" +
                 "perimeter=" + perimeter +
                 ", area=" + area +
+                ", radius=" + radius +
                 '}';
     }
-
-
-
 }

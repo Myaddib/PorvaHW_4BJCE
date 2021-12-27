@@ -16,7 +16,7 @@ public class Triangle extends PlanceShape implements PerimeterMeasurable, AreaMe
     }
 
 
-    @Override
+
     public double getPerimeter() {
         perimeter = 0;
         perimeter += SegmentLine(getVerticles()[0], getVerticles()[1]);
@@ -25,7 +25,7 @@ public class Triangle extends PlanceShape implements PerimeterMeasurable, AreaMe
         return perimeter;
     }
 
-    @Override
+
     public double getArea() {
         double p = perimeter / 2;
         area = Math.sqrt(p * (p - SegmentLine(getVerticles()[0], getVerticles()[1])) * (p - SegmentLine(getVerticles()[1], getVerticles()[2])) * (p - SegmentLine(getVerticles()[0], getVerticles()[2])));
@@ -34,7 +34,7 @@ public class Triangle extends PlanceShape implements PerimeterMeasurable, AreaMe
 
     @Override
     public String toString() {
-        return "Triangle{" + Arrays.toString(getVerticles()) + " " +
+        return "Triangle{" +
                 "perimeter=" + perimeter +
                 ", area=" + area +
                 '}';
