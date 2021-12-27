@@ -2,10 +2,7 @@ package basic.java_cursor.education.shape.PlanceShape;
 
 import basic.java_cursor.education.shape.AreaMeasurable;
 import basic.java_cursor.education.shape.PerimeterMeasurable;
-import basic.java_cursor.education.shape.PlanceShape.PlanceShape;
 import basic.java_cursor.education.shape.Vertex;
-
-import java.util.Arrays;
 
 public class Triangle extends PlanceShape implements PerimeterMeasurable, AreaMeasurable {
     private double perimeter;
@@ -14,7 +11,6 @@ public class Triangle extends PlanceShape implements PerimeterMeasurable, AreaMe
     public Triangle(Vertex[] verticles) {
         super(verticles);
     }
-
 
 
     public double getPerimeter() {

@@ -7,15 +7,15 @@ import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class PlanceShape extends Shape {
-     Vertex a;
-     Vertex b;
+    Vertex a;
+    Vertex b;
 
     public PlanceShape(Vertex[] verticles) {
         super(verticles);
     }
 
     @Override
-        public double SegmentLine(Vertex a, Vertex b) {
+    public double SegmentLine(Vertex a, Vertex b) {
         this.a = a;
         this.b = b;
         double length;

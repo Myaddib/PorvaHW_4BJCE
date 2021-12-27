@@ -5,11 +5,9 @@ import basic.java_cursor.education.shape.AreaMeasurable;
 import basic.java_cursor.education.shape.Vertex;
 import basic.java_cursor.education.shape.VolumeMeasurable;
 
-import java.util.Arrays;
-
 public class SquarePyramid extends SpaceShape implements AreaMeasurable, VolumeMeasurable {
-    private double baseWidth;
-    private double baseHeight;
+    private final double baseWidth;
+    private final double baseHeight;
     private double volume;
     private double area;
 
@@ -18,7 +16,6 @@ public class SquarePyramid extends SpaceShape implements AreaMeasurable, VolumeM
         this.baseHeight = baseHeight;
         this.baseWidth = baseWidth;
     }
-
 
 
     public double getArea() {

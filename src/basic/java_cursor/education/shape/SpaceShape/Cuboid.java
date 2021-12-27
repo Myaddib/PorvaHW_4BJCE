@@ -4,12 +4,10 @@ import basic.java_cursor.education.shape.AreaMeasurable;
 import basic.java_cursor.education.shape.Vertex;
 import basic.java_cursor.education.shape.VolumeMeasurable;
 
-import java.util.Arrays;
-
 public class Cuboid extends SpaceShape implements VolumeMeasurable, AreaMeasurable {
-    private double height;
-    private double weight;
-    private double depth;
+    private final double height;
+    private final double weight;
+    private final double depth;
     private double area;
     private double volume;
 
@@ -19,7 +17,6 @@ public class Cuboid extends SpaceShape implements VolumeMeasurable, AreaMeasurab
         this.height = height;
         this.weight = weight;
     }
-
 
 
     public double getArea() {

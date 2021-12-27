@@ -1,17 +1,18 @@
 package basic.java_cursor.education;
 
-import basic.java_cursor.education.shape.*;
 import basic.java_cursor.education.shape.PlanceShape.Circle;
 import basic.java_cursor.education.shape.PlanceShape.Rectangle;
 import basic.java_cursor.education.shape.PlanceShape.Triangle;
+import basic.java_cursor.education.shape.Shape;
 import basic.java_cursor.education.shape.SpaceShape.Cuboid;
 import basic.java_cursor.education.shape.SpaceShape.Sphere;
 import basic.java_cursor.education.shape.SpaceShape.SquarePyramid;
+import basic.java_cursor.education.shape.Vertex;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         Vertex[] point1 = new Vertex[1];
         point1[0] = new Vertex(4, 5);// масив, що містить одну вершину, належитиме всім фігурам,де використовують за умовою одну вершину
         Circle circle = new Circle(point1, 4);

@@ -19,7 +19,7 @@ public abstract class SpaceShape extends Shape {
         this.a = a;
         this.b = b;
         double length;
-        length = sqrt(pow((a.getX() - b.getX()), 2) + pow((a.getY() - b.getY()), 2)+pow((a.getZ() - b.getZ()), 2));
+        length = sqrt(pow((a.getX() - b.getX()), 2) + pow((a.getY() - b.getY()), 2) + pow((a.getZ() - b.getZ()), 2));
         return length;
     }
 

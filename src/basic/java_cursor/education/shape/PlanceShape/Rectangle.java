@@ -2,14 +2,11 @@ package basic.java_cursor.education.shape.PlanceShape;
 
 import basic.java_cursor.education.shape.AreaMeasurable;
 import basic.java_cursor.education.shape.PerimeterMeasurable;
-import basic.java_cursor.education.shape.PlanceShape.PlanceShape;
 import basic.java_cursor.education.shape.Vertex;
 
-import java.util.Arrays;
-
 public class Rectangle extends PlanceShape implements PerimeterMeasurable, AreaMeasurable {
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
     private double perimeter;
     private double area;
 

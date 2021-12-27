@@ -5,13 +5,11 @@ import basic.java_cursor.education.shape.PerimeterMeasurable;
 import basic.java_cursor.education.shape.SpaceShape.SpaceShape;
 import basic.java_cursor.education.shape.Vertex;
 
-import java.util.Arrays;
-
 public class Circle extends SpaceShape implements PerimeterMeasurable, AreaMeasurable {
 
     private double perimeter;
     private double area;
-    private double radius;
+    private final double radius;
 
     public Circle(Vertex[] verticles, double radius) {
         super(verticles);
