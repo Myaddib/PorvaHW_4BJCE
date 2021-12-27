@@ -16,11 +16,6 @@ public abstract class Shape {
         this.verticles = verticles;
     }
 
+    public abstract double SegmentLine(Vertex a, Vertex b);
 
-    public abstract double SegmentLine();
-
-
-    public double SegmentLine(Vertex a, Vertex b){
-        return 0;
-    };
 }

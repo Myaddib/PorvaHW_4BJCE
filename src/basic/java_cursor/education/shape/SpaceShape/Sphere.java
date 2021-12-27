@@ -15,18 +15,14 @@ public class Sphere extends SpaceShape implements AreaMeasurable, VolumeMeasurab
         this.radius = radius;
     }
 
-    @Override
-    public double getPerimeter() {
-        return 0;
-    }
 
-    @Override
+
     public double getArea() {
         area = 4 * Math.PI * radius * radius;
         return area;
     }
 
-    @Override
+
     public double getVolume() {
         volume = Math.PI * Math.pow(radius, 3) * 4 / 3;
         return volume;
@@ -40,8 +36,4 @@ public class Sphere extends SpaceShape implements AreaMeasurable, VolumeMeasurab
                 '}';
     }
 
-    @Override
-    public double SegmentLine() {
-        return 0;
-    }
 }

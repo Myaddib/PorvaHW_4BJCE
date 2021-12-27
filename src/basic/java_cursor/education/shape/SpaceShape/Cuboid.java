@@ -20,18 +20,14 @@ public class Cuboid extends SpaceShape implements VolumeMeasurable, AreaMeasurab
         this.weight = weight;
     }
 
-    @Override
-    public double getPerimeter() {
-        return 0;
-    }
 
-    @Override
+
     public double getArea() {
         area = 2 * (weight * depth + weight * height + depth * height);
         return area;
     }
 
-    @Override
+
     public double getVolume() {
         volume = height * weight * depth;
         return volume;
@@ -45,8 +41,4 @@ public class Cuboid extends SpaceShape implements VolumeMeasurable, AreaMeasurab
                 '}';
     }
 
-    @Override
-    public double SegmentLine() {
-        return 0;
-    }
 }

@@ -18,23 +18,15 @@ public class SquarePyramid extends SpaceShape implements AreaMeasurable, VolumeM
         this.baseHeight = baseHeight;
         this.baseWidth = baseWidth;
     }
-    @Override
-    public double SegmentLine() {
-        return 0;
-    }
 
-    @Override
-    public double getPerimeter() {
-        return 0;
-    }
 
-    @Override
+
     public double getArea() {
         area = Math.sqrt(Math.pow(baseWidth / 2, 2) + Math.pow(baseHeight, 2)) * baseWidth;
         return area;
     }
 
-    @Override
+
     public double getVolume() {
         volume = baseWidth * baseWidth * baseHeight / 3;
         return volume;

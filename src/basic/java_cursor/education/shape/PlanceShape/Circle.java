@@ -1,13 +1,14 @@
 package basic.java_cursor.education.shape.PlanceShape;
 
 import basic.java_cursor.education.shape.AreaMeasurable;
+import basic.java_cursor.education.shape.PerimeterMeasurable;
 import basic.java_cursor.education.shape.SpaceShape.SpaceShape;
 import basic.java_cursor.education.shape.Vertex;
 import basic.java_cursor.education.shape.VolumeMeasurable;
 
 import java.util.Arrays;
 
-public class Circle extends SpaceShape implements VolumeMeasurable, AreaMeasurable {
+public class Circle extends SpaceShape implements PerimeterMeasurable, AreaMeasurable {
 
     private double perimeter;
     private double area;
@@ -18,29 +19,18 @@ public class Circle extends SpaceShape implements VolumeMeasurable, AreaMeasurab
         this.radius = radius;
     }
 
-    @Override
+
     public double getPerimeter() {
         perimeter = 2 * Math.PI * radius;
         return perimeter;
     }
 
-    @Override
+
     public double getArea() {
 
         area = Math.PI * radius * radius;
         return area;
     }
-
-    @Override
-    public double SegmentLine() {
-        return 0;
-    }
-
-    @Override
-    public double getVolume() {
-        return 0;
-    }
-
     @Override
     public String toString() {
         return "Circle{" + Arrays.toString(getVerticles()) + "," + radius + " /" +
@@ -48,4 +38,7 @@ public class Circle extends SpaceShape implements VolumeMeasurable, AreaMeasurab
                 ", area=" + area +
                 '}';
     }
+
+
+
 }

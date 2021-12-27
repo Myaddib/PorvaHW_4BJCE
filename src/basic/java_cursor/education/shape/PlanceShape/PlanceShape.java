@@ -15,12 +15,7 @@ public class PlanceShape extends Shape {
     }
 
     @Override
-    public double SegmentLine() {
-        return 0;
-    }
-
-    @Override
-    public double SegmentLine(Vertex a, Vertex b) {
+        public double SegmentLine(Vertex a, Vertex b) {
         this.a = a;
         this.b = b;
         double length;
