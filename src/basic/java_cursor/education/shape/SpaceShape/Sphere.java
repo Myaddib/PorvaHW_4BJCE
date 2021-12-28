@@ -1,16 +1,18 @@
 package basic.java_cursor.education.shape.SpaceShape;
 
 import basic.java_cursor.education.shape.AreaMeasurable;
-import basic.java_cursor.education.shape.Vertex;
 import basic.java_cursor.education.shape.VolumeMeasurable;
 
 public class Sphere extends SpaceShape implements AreaMeasurable, VolumeMeasurable {
     private final double radius;
     private double area;
     private double volume;
+    public Vertex3d verticles;
 
-    public Sphere(Vertex[] verticles, double radius) {
-        super(verticles);
+    public Sphere(Vertex3d verticlesS, double radius) {
+        super(verticlesS);
+        this.verticles = verticlesS;
+        setVerticles(verticles);
         this.radius = radius;
     }
 
@@ -29,6 +31,7 @@ public class Sphere extends SpaceShape implements AreaMeasurable, VolumeMeasurab
     @Override
     public String toString() {
         return "Sphere{" +
+                "vertex=" + verticles +
                 "radius=" + radius +
                 ", area=" + area +
                 ", volume=" + volume +

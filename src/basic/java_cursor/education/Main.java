@@ -7,36 +7,40 @@ import basic.java_cursor.education.shape.Shape;
 import basic.java_cursor.education.shape.SpaceShape.Cuboid;
 import basic.java_cursor.education.shape.SpaceShape.Sphere;
 import basic.java_cursor.education.shape.SpaceShape.SquarePyramid;
-import basic.java_cursor.education.shape.Vertex;
+import basic.java_cursor.education.shape.PlanceShape.Vertex;
+import basic.java_cursor.education.shape.SpaceShape.Vertex3d;
 
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        Vertex[] point1 = new Vertex[1];
-        point1[0] = new Vertex(4, 5);// масив, що містить одну вершину, належитиме всім фігурам,де використовують за умовою одну вершину
-        Circle circle = new Circle(point1, 4);
+        Vertex vertexCircle = new Vertex(10,7);
+
+        Circle circle = new Circle(vertexCircle, 4);
         circle.getArea();
         circle.getPerimeter();
-        Vertex[] pointThree = new Vertex[3];// масив з трьох вершин, використовується для трикутника
-        pointThree[0] = new Vertex(2, 3);
-        pointThree[1] = new Vertex(-1, 0);
-        pointThree[2] = new Vertex(-5, 6);
-        Triangle triangle = new Triangle(pointThree);
+
+        // масив з трьох вершин, використовується для трикутника
+
+        Triangle triangle = new Triangle(new Vertex(2, 3), new Vertex(-1, 0), new Vertex(-5, 6));
         triangle.getPerimeter();
         triangle.getArea();
-        Vertex[] pointOfRectangle = new Vertex[1];
-        pointOfRectangle[0] = new Vertex(1, 2);
-        Rectangle rectangle = new Rectangle(pointOfRectangle, 4, 6);
+
+
+        Rectangle rectangle = new Rectangle(new Vertex(1, 2), 4, 6);
         rectangle.getArea();
         rectangle.getPerimeter();
-        SquarePyramid squarePyramid = new SquarePyramid(point1, 4, 6);
+
+        Vertex3d vertex3d = new Vertex3d(10, 7,4);
+        SquarePyramid squarePyramid = new SquarePyramid(vertex3d, 4, 6);
         squarePyramid.getArea();
         squarePyramid.getVolume();
-        Cuboid cuboid = new Cuboid(point1, 6, 7, 8);
+
+        Cuboid cuboid = new Cuboid(vertex3d, 6, 7, 8);
         cuboid.getArea();
         cuboid.getVolume();
-        Sphere sphere = new Sphere(point1, 6);
+
+        Sphere sphere = new Sphere(vertex3d, 6);
         sphere.getArea();
         sphere.getVolume();
 

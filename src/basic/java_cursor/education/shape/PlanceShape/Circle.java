@@ -2,17 +2,17 @@ package basic.java_cursor.education.shape.PlanceShape;
 
 import basic.java_cursor.education.shape.AreaMeasurable;
 import basic.java_cursor.education.shape.PerimeterMeasurable;
-import basic.java_cursor.education.shape.SpaceShape.SpaceShape;
-import basic.java_cursor.education.shape.Vertex;
 
-public class Circle extends SpaceShape implements PerimeterMeasurable, AreaMeasurable {
+public class Circle extends PlanceShape implements PerimeterMeasurable, AreaMeasurable {
 
     private double perimeter;
     private double area;
     private final double radius;
+    public Vertex verticles;
 
-    public Circle(Vertex[] verticles, double radius) {
-        super(verticles);
+    public Circle(Vertex verticlesC, double radius) {
+        super(verticlesC);
+        this.verticles = verticlesC;
         this.radius = radius;
     }
 
@@ -32,6 +32,7 @@ public class Circle extends SpaceShape implements PerimeterMeasurable, AreaMeasu
     @Override
     public String toString() {
         return "Circle{" +
+                "vertex=" + verticles +
                 "perimeter=" + perimeter +
                 ", area=" + area +
                 ", radius=" + radius +

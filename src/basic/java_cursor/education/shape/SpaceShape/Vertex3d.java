@@ -1,26 +1,21 @@
-package basic.java_cursor.education.shape;
+package basic.java_cursor.education.shape.SpaceShape;
 
-public class Vertex {
+public class Vertex3d {
     private double x;
     private double y;
     private double z;
 
-    public Vertex(double x, double y, double z) {
+    public Vertex3d(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
-    }
-
-    public Vertex(double x, double y) {
-        this.x = x;
-        this.y = y;
     }
 
     public double getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(double z) {
         this.x = x;
     }
 
@@ -38,5 +33,15 @@ public class Vertex {
 
     public void setZ(double z) {
         this.z = z;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Vertex{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                '}';
     }
 }
