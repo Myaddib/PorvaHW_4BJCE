@@ -20,7 +20,7 @@ public class SquarePyramid extends SpaceShape implements AreaMeasurable, VolumeM
 
 
     public double getArea() {
-        area = Math.sqrt(Math.pow(baseWidth / 2, 2) + Math.pow(baseHeight, 2)) * baseWidth;
+        area = ( baseWidth*4*Math.sqrt(Math.pow(baseWidth / 2, 2) + Math.pow(baseHeight, 2)) * 2) + baseWidth *baseWidth;
         return area;
     }
 
@@ -32,7 +32,7 @@ public class SquarePyramid extends SpaceShape implements AreaMeasurable, VolumeM
 
     @Override
     public String toString() {
-        return "SquarePyramid{" +
+        return "SquarePyramid={" +
                 "vertex=" + verticles +
                 "baseWidth=" + baseWidth +
                 ", baseHeight=" + baseHeight +

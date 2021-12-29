@@ -31,7 +31,7 @@ public class Rectangle extends PlanceShape implements PerimeterMeasurable, AreaM
 
     @Override
     public String toString() {
-        return "Rectangle{" +
+        return "Rectangle={" +
                 "vertex=" + verticles1 +
                 "width=" + width +
                 ", height=" + height +

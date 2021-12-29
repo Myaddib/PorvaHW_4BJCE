@@ -30,7 +30,7 @@ public class Sphere extends SpaceShape implements AreaMeasurable, VolumeMeasurab
 
     @Override
     public String toString() {
-        return "Sphere{" +
+        return "Sphere={" +
                 "vertex=" + verticles +
                 "radius=" + radius +
                 ", area=" + area +

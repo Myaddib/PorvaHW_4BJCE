@@ -33,7 +33,7 @@ public class Cuboid extends SpaceShape implements VolumeMeasurable, AreaMeasurab
 
     @Override
     public String toString() {
-        return "Cuboid{" +
+        return "Cuboid={" +
                 "vertex=" + verticles +
                 "height=" + height +
                 ", weight=" + weight +

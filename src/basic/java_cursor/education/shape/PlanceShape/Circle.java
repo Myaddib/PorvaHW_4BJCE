@@ -18,20 +18,20 @@ public class Circle extends PlanceShape implements PerimeterMeasurable, AreaMeas
 
 
     public double getPerimeter() {
-        perimeter = 2 * Math.PI * radius;
+        perimeter = 2 * Math.PI * radius; // С = 2π * R
         return perimeter;
     }
 
 
     public double getArea() {
 
-        area = Math.PI * radius * radius;
+        area = Math.PI * radius * radius; // S = π R2
         return area;
     }
 
     @Override
     public String toString() {
-        return "Circle{" +
+        return "Circle={" +
                 "vertex=" + verticles +
                 "perimeter=" + perimeter +
                 ", area=" + area +
