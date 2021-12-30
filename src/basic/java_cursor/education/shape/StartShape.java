@@ -34,7 +34,7 @@ public class StartShape {
         squarePyramid.getArea();
         squarePyramid.getVolume();
 
-        Cuboid cuboid = new Cuboid(vertex3d, 6, 7, 8);
+        Cuboid cuboid = new Cuboid(vertex3d, 5, 5, 5);
         cuboid.getArea();
         cuboid.getVolume();
 

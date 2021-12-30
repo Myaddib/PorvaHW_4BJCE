@@ -1,16 +1,8 @@
 package basic.java_cursor.education.shop;
 
-public class AgeRestriction {
-
-    public void None(){
-
-    }
-    public void Teenager(){
-
-    }
-
-    public  void Adult(){
-
-    }
+public enum AgeRestriction {
+    None,               // немає обмежень
+    Teenager,           // для підлітків
+    Adult              // для дорослих
 
 }
