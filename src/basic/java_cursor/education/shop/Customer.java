@@ -4,11 +4,19 @@ public class Customer {
     private String name;
     private int age;
     private double balanct;
+    private final AgeRestriction ageRestriction;
 
-    public void Customer(String name, int age, double balanct) {
+    public Customer(String name, int age, double balanct) {
         this.name = name;
         this.age = age;
         this.balanct = balanct;
+        if (age < 18) {
+            this.ageRestriction = AgeRestriction.Teenager;
+
+        } else {
+            this.ageRestriction = AgeRestriction.Adult;
+
+        }
     }
 
     public String getName() {
@@ -29,5 +37,9 @@ public class Customer {
 
     public void setBalanct(double balanct) {
         this.balanct = balanct;
+    }
+
+    public AgeRestriction getAgeRestriction() {
+        return ageRestriction;
     }
 }

@@ -39,8 +39,7 @@ public abstract class Product {
             earlier.add(Calendar.DAY_OF_YEAR, tempDifference);
         }
 
-        if (earlier.get(Calendar.DAY_OF_YEAR) != later.get(Calendar.DAY_OF_YEAR))
-        {
+        if (earlier.get(Calendar.DAY_OF_YEAR) != later.get(Calendar.DAY_OF_YEAR)) {
             tempDifference = later.get(Calendar.DAY_OF_YEAR) - earlier.get(Calendar.DAY_OF_YEAR);
             difference += tempDifference;
 
@@ -50,4 +49,51 @@ public abstract class Product {
         return difference;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public AgeRestriction getAgeRestriction() {
+        return ageRestriction;
+    }
+
+    public void setAgeRestriction(AgeRestriction ageRestriction) {
+        this.ageRestriction = ageRestriction;
+    }
+
+    public Date getDateOfManufacture() {
+        return dateOfManufacture;
+    }
+
+    public void setDateOfManufacture(Date dateOfManufacture) {
+        this.dateOfManufacture = dateOfManufacture;
+    }
+
+    public Date getValidity() {
+        return validity;
+    }
+
+    public void setValidity(Date validity) {
+        this.validity = validity;
+    }
 }

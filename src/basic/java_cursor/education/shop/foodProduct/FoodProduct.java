@@ -16,7 +16,7 @@ public class FoodProduct extends Product {
     Date dateOfManufacture;
     Date validity;
 
-    public void FoodProduct(String name, Double price, int quantity, AgeRestriction ageRestriction) {
+    public FoodProduct(String name, Double price, int quantity, AgeRestriction ageRestriction) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -24,7 +24,7 @@ public class FoodProduct extends Product {
         Calendar validity = new GregorianCalendar();
         this.dateOfManufacture = validity.getTime();
         validity.add(Calendar.DAY_OF_YEAR, 30);
-        this.validity =  validity.getTime();
+        this.validity = validity.getTime();
     }
 
     public String getName() {
