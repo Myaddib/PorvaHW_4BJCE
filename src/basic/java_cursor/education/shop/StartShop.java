@@ -2,8 +2,7 @@ package basic.java_cursor.education.shop;
 
 import basic.java_cursor.education.shop.foodProduct.FoodProduct;
 
-import static basic.java_cursor.education.shop.AgeRestriction.Adult;
-import static basic.java_cursor.education.shop.AgeRestriction.Teenager;
+import static basic.java_cursor.education.shop.AgeRestriction.*;
 
 public class StartShop {
 
@@ -33,6 +32,7 @@ public class StartShop {
         //Catch any exceptions in your main() method and print their message.
 
         static public void processPurchase(Customer customerBuy, Product productBuy) {
+
             if ((customerBuy.getBalanct() > productBuy.price) && productBuy.quantity > 0) {
                 if (customerBuy.getAgeRestriction() == Adult) {
                     productBuy.setQuantity(productBuy.getQuantity() - 1);
@@ -42,19 +42,22 @@ public class StartShop {
                     productBuy.setQuantity(productBuy.getQuantity() - 1);
                     customerBuy.setBalanct(customerBuy.getBalanct() - productBuy.getPrice());
 
-                } else {
+                } else if (None == customerBuy.getAgeRestriction()) {
                     productBuy.setQuantity(productBuy.getQuantity() - 1);
                     customerBuy.setBalanct(customerBuy.getBalanct() - productBuy.getPrice());
-
+                } else {
+                    System.out.println("If the buyer does not have permission to purchase the given product");
                 }
             } else {
                 if (customerBuy.getBalanct() > productBuy.getPrice()) {
-                    System.out.println("there are not enough funds in the account");
+                    System.out.println("If the buyer does not have enough money ");
                 } else {
                     System.out.println("Missing goods: " + productBuy.getName());
                 }
             }
+
         }
+
 
     }
 
