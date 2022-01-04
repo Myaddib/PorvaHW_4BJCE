@@ -16,14 +16,15 @@ public class ElectronicsProduct extends Product {
     Date dateOfManufacture;
     Date validity;
 
-    public void ElectronicsProduct(String name, double price, int quantity, AgeRestriction ageRestriction, Date dateOfManufacture, Date validity){
+    public void ElectronicsProduct(String name, double price, int quantity, AgeRestriction ageRestriction, Date dateOfManufacture, Date validity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.ageRestriction = ageRestriction;
         this.dateOfManufacture = dateOfManufacture;
-        this.validity=validity;
+        this.validity = validity;
     }
+
     public void ElectronicsProduct(String name, double price, int quantity, AgeRestriction ageRestriction) {
         this.name = name;
         this.price = price;
@@ -31,15 +32,16 @@ public class ElectronicsProduct extends Product {
         this.ageRestriction = ageRestriction;
         Calendar validity = new GregorianCalendar();
         this.dateOfManufacture = validity.getTime();
-        if(this.name == "Computer"){
-        validity.add(Calendar.DAY_OF_YEAR, 711);
-        this.validity = validity.getTime();
-        } else{
+        if (this.name == "Computer") {
+            validity.add(Calendar.DAY_OF_YEAR, 711);
+            this.validity = validity.getTime();
+        } else {
             validity.add(Calendar.DAY_OF_YEAR, 180);
             this.validity = validity.getTime();
         }
 
     }
+
     public String getName() {
 
         return name;
@@ -51,10 +53,10 @@ public class ElectronicsProduct extends Product {
     }
 
     public double getPrice() {
-        if(this.name == "Computer" && this.quantity>=1000) {
+        if (this.name == "Computer" && this.quantity >= 1000) {
             return price * 0.95;
         }
-        if(this.name == "Appliance" && this.quantity<=50) {
+        if (this.name == "Appliance" && this.quantity <= 50) {
             return price * 1.05;
         }
         return price;

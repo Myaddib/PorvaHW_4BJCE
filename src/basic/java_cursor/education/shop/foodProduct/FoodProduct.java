@@ -33,10 +33,10 @@ public class FoodProduct extends Product {
 
     public double getPrice() {
         Date c = new Date();
-        int z = calculateDifference(c,this.dateOfManufacture );
+        int z = calculateDifference(c, this.dateOfManufacture);
 
-        if (z<=15){
-            return price*0.7;
+        if (z <= 15) {
+            return price * 0.7;
         }
         return price;
     }
